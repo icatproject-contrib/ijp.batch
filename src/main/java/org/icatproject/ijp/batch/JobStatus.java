@@ -1,5 +1,5 @@
 package org.icatproject.ijp.batch;
 
 public enum JobStatus {
-	Completed, Executing, Held, Running, Queued, Cancelled, Unknown
+	Completed, Executing, Held, Queued, Cancelled, Unknown
 }
