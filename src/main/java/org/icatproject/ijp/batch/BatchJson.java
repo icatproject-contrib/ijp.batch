@@ -18,8 +18,7 @@ public class BatchJson {
 
 	public static String getStatus(JobStatus status) {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		Json.createGenerator(baos).writeStartObject().write("status", status.name()).writeEnd()
-				.close();
+		Json.createGenerator(baos).writeStartObject().write("status", status.name()).writeEnd().close();
 		return baos.toString();
 	}
 
@@ -37,8 +36,7 @@ public class BatchJson {
 		logger.info("Processing: " + e.getClass() + " " + e.getMessage());
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		JsonGenerator gen = Json.createGenerator(baos);
-		gen.writeStartObject().write("code", e.getClass().getSimpleName())
-				.write("message", e.getMessage());
+		gen.writeStartObject().write("code", e.getClass().getSimpleName()).write("message", e.getMessage());
 		gen.writeEnd().close();
 		return Response.status(e.getHttpStatusCode()).entity(baos.toString()).build();
 	}
@@ -47,10 +45,9 @@ public class BatchJson {
 		logger.info("Processing: " + e.getClass() + " " + e.getMessage());
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		JsonGenerator gen = Json.createGenerator(baos);
-		gen.writeStartObject().write("code", "InternalException")
-				.write("message", e.getClass() + " " + e.getMessage()).writeEnd().close();
-		return Response.status(HttpURLConnection.HTTP_INTERNAL_ERROR).entity(baos.toString())
-				.build();
+		gen.writeStartObject().write("code", "InternalException").write("message", e.getClass() + " " + e.getMessage())
+				.writeEnd().close();
+		return Response.status(HttpURLConnection.HTTP_INTERNAL_ERROR).entity(baos.toString()).build();
 	}
 
 	public static String submitBatch(String jobId) {
@@ -62,8 +59,8 @@ public class BatchJson {
 	public static String submitRDP(String username, String password, String host) {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		JsonGenerator gen = Json.createGenerator(baos);
-		gen.writeStartObject().writeStartObject("rdp").write("username", username)
-				.write("password", password).write("host", host).writeEnd().writeEnd().close();
+		gen.writeStartObject().writeStartObject("rdp").write("username", username).write("password", password)
+				.write("host", host).writeEnd().writeEnd().close();
 		return baos.toString();
 	}
 
