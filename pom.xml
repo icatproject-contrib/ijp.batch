@@ -4,7 +4,7 @@
 
 	<groupId>org.icatproject</groupId>
 	<artifactId>ijp.batch</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>ijp.batch</name>
 	<packaging>jar</packaging>
 
@@ -36,7 +36,7 @@ http://data.datacite.org/10.5286/SOFTWARE/ICAT/ijp.batch.</description>
 		<connection>scm:git:https://github.com/icatproject/ijp.batch.git</connection>
 		<developerConnection>scm:git:https://github.com/icatproject/ijp.batch.git</developerConnection>
 		<url>https://github.com/icatproject/ijp.batch</url>
-	  <tag>ijp.batch-1.0.0</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<issueManagement>
