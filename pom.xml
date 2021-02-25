@@ -91,7 +91,7 @@ http://data.datacite.org/10.5286/SOFTWARE/ICAT/ijp.batch.</description>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.8.1</version>
+			<version>4.13.1</version>
 			<scope>test</scope>
 		</dependency>
 
